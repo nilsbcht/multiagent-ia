@@ -3,9 +3,9 @@ name: Hello CI
 # TRIGGER : quand ce workflow se déclenche-t-il ?
 on:
   push:
-    branches: [main]      # à chaque push sur la branche main
+    branches: [master]      # à chaque push sur la branche master
   pull_request:
-    branches: [main]      # ou à chaque pull request vers main
+    branches: [master]      # ou à chaque pull request vers master
 
 # JOBS : la ou les tâches à exécuter
 jobs:
