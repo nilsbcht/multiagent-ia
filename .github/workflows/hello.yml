@@ -1,0 +1,28 @@
+name: Hello CI
+
+# TRIGGER : quand ce workflow se déclenche-t-il ?
+on:
+  push:
+    branches: [main]      # à chaque push sur la branche main
+  pull_request:
+    branches: [main]      # ou à chaque pull request vers main
+
+# JOBS : la ou les tâches à exécuter
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest   # le runner : une machine virtuelle Ubuntu fournie par GitHub
+
+    steps:
+      - name: Récupérer le code du repo
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Afficher un message
+        run: echo "Bonjour depuis GitHub Actions !"
+
+      - name: Vérifier la version de Python
+        run: python --version
