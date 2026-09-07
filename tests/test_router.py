@@ -1,6 +1,7 @@
 # tests/test_router.py
 from main import route_task
 
+
 def test_route_research():
     assert route_task("research") == "research_agent"
 
