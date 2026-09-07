@@ -1,0 +1,9 @@
+# Framework agents / LLM
+langchain      
+
+# Pour l'API (pour la déployer en ligne)
+fastapi
+uvicorn
+
+# Variables d'environnement
+python-dotenv
