@@ -1,5 +1,5 @@
 # tests/test_router.py
-from main import route_task
+from router import route_task
 
 
 def test_route_research():
